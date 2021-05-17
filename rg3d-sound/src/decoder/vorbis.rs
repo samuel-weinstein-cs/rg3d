@@ -7,7 +7,7 @@ use std::{
     vec,
 };
 
-pub struct OggDecoder {
+pub(in crate) struct OggDecoder {
     // Option here is because we need to bypass a bug in lewton by replacing
     // the whole OggStreamReader on rewind by extracting data source and
     // create new OggStreamReader from it. Its ugly.
